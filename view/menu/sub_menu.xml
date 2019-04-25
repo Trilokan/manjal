@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Menu : Academic : Register-->
+    <menuitem id="school_academic_register" name="Register" parent="school_academic" sequence="10"/>
+    <menuitem id="school_academic_register_person" name="Person" parent="school_academic_register" action="action_arc_person" sequence="10"/>
+    <menuitem id="school_academic_register_employee" name="Employee" parent="school_academic_register" action="action_hr_employee" sequence="20"/>
+    <menuitem id="school_academic_register_student" name="Student" parent="school_academic_register" action="action_arc_student" sequence="30"/>
+    <menuitem id="school_academic_register_admission" name="Admission" parent="school_academic_register" action="action_arc_student" sequence="30"/>
+    <menuitem id="school_academic_register_transfer" name="Transfer" parent="school_academic_register" action="action_arc_student" sequence="30"/>
+
+    <!--Menu : Academic : Master-->
+    <menuitem id="school_academic_master" name="Master" parent="school_academic" sequence="20"/>
+    <menuitem id="school_academic_master_academic" name="Academic" parent="school_academic_master" action="" sequence="10"/>
+    <menuitem id="school_academic_master_standard" name="Standard" parent="school_academic_master" action="" sequence="20"/>
+    <menuitem id="school_academic_master_section" name="Section" parent="school_academic_master" action="" sequence="30"/>
+
+    <!--Menu : Academic : Academic-->
+    <menuitem id="school_academic_academic" name="Academic" parent="school_academic" sequence="30"/>
+    <menuitem id="school_academic_academic_academic" name="Academic" parent="school_academic_academic" action="" sequence="10"/>
+    <menuitem id="school_academic_academic_standard" name="Standard" parent="school_academic_academic" action="" sequence="20"/>
+    <menuitem id="school_academic_academic_section" name="Section" parent="school_academic_academic" action="" sequence="30"/>
+
+    <!--Menu : Academic : Syllabus-->
+    <menuitem id="school_academic_syllabus" name="Syllabus" parent="school_academic" sequence="30"/>
+    <menuitem id="school_academic_syllabus_subject" name="Subject" parent="school_academic_syllabus" sequence="30"/>
+    <menuitem id="school_academic_syllabus_syllabus" name="Syllabus" parent="school_academic_syllabus" sequence="30"/>
+    <menuitem id="school_academic_syllabus_question_bank" name="Question Bank" parent="school_academic_syllabus" sequence="30"/>
+
+    <!--Menu : Academic : section-->
+    <menuitem id="school_academic_section" name="Section" parent="school_academic" sequence="40"/>
+    <menuitem id="school_academic_section_timetable" name="Timetable" parent="school_academic_section" sequence="10"/>
+    <menuitem id="school_academic_section_attendance" name="Attendance" parent="school_academic_section" sequence="20"/>
+    <menuitem id="school_academic_section_homework" name="Homework" parent="school_academic_section" sequence="30"/>
+    <menuitem id="school_academic_section_test" name="Test" parent="school_academic_section" sequence="40"/>
+    <menuitem id="school_academic_section_exam" name="Exam" parent="school_academic_section" sequence="50"/>
+    <menuitem id="school_academic_section_marks" name="Marks" parent="school_academic_section" sequence="60"/>
+    <menuitem id="school_academic_section_rank" name="Rank" parent="school_academic_section" sequence="70"/>
+    <menuitem id="school_academic_section_diary" name="Diary" parent="school_academic_section" sequence="80"/>
+
+    <!--Menu : Inventory : Product-->
+    <menuitem id="school_inventory_product" name="Product" parent="school_inventory" sequence="10"/>
+    <menuitem id="school_inventory_product_product" name="Product" parent="school_inventory_product" action="action_arc_product" sequence="10"/>
+    <menuitem id="school_inventory_product_group" name="Group" parent="school_inventory_product" action="action_product_group" sequence="20"/>
+    <menuitem id="school_inventory_product_sub_group" name="Sub Group" parent="school_inventory_product" action="action_product_sub_group" sequence="30"/>
+    <menuitem id="school_inventory_product_category" name="Category" parent="school_inventory_product" action="action_product_category" sequence="40"/>
+    <menuitem id="school_inventory_product_uom" name="UOM" parent="school_inventory_product" action="action_product_uom" sequence="50"/>
+    <menuitem id="school_inventory_product_tax" name="Tax" parent="school_inventory_product" action="action_product_tax" sequence="60"/>
+    <menuitem id="school_inventory_product_location" name="Location" parent="school_inventory_product" action="action_store_location" sequence="70"/>
+    <menuitem id="school_inventory_product_warehouse" name="Warehouse" parent="school_inventory_product" action="action_store_warehouse" sequence="80"/>
+
+    <!--Menu : Inventory : Stores-->
+    <menuitem id="school_inventory_store" name="Stores" parent="school_inventory" sequence="20"/>
+    <menuitem id="school_inventory_store_adjust" name="Stock Adjustment" parent="school_inventory_store" action="action_stock_adjustment" sequence="10"/>
+    <menuitem id="school_inventory_store_request" name="Store Request" parent="school_inventory_store" action="action_store_request" sequence="20"/>
+    <menuitem id="school_inventory_store_issue" name="Store Issue" parent="school_inventory_store" action="action_store_issue" sequence="30"/>
+    <menuitem id="school_inventory_store_return" name="Store Return" parent="school_inventory_store" action="action_store_return" sequence="40"/>
+    <menuitem id="school_inventory_store_accept" name="Store Accept" parent="school_inventory_store" action="action_store_accept" sequence="50"/>
+    <menuitem id="school_inventory_store_move" name="Stock Move" parent="school_inventory_store" action="action_arc_move" sequence="60"/>
+    <menuitem id="school_inventory_store_config" name="Store Configuration" parent="school_inventory_store" action="action_store_config" sequence="70"/>
+
+    <!--Menu : Inventory : Asserts-->
+    <menuitem id="school_inventory_asserts" name="Asserts" parent="school_inventory" sequence="30"/>
+    <menuitem id="school_inventory_asserts_asserts" name="Asserts" parent="school_inventory_asserts" action="action_arc_asserts" sequence="10"/>
+    <menuitem id="school_inventory_asserts_capital" name="Capitalisation" parent="school_inventory_asserts" action="action_asserts_capitalisation" sequence="20"/>
+    <menuitem id="school_inventory_asserts_maintain" name="Maintenance" parent="school_inventory_asserts" action="action_asserts_maintenance" sequence="30"/>
+    <menuitem id="school_inventory_asserts_reminder" name="Reminder" parent="school_inventory_asserts" action="action_asserts_reminder" sequence="40"/>
+
+    <!--Menu : Procurement : Purchase-->
+    <menuitem id="school_procurement_purchase" name="Purchase" parent="school_procurement" sequence="10"/>
+    <menuitem id="school_procurement_purchase_indent" name="Purchase Indent" parent="school_procurement_purchase" action="action_purchase_indent" sequence="10"/>
+    <menuitem id="school_procurement_purchase_indent_approval" name="Indent Approval" parent="school_procurement_purchase" action="action_indent_detail" sequence="20"/>
+    <menuitem id="school_procurement_purchase_vendor_selection" name="Vendor Selection" parent="school_procurement_purchase" action="action_vendor_selection" sequence="30"/>
+    <menuitem id="school_procurement_purchase_quotation" name="Quotation" parent="school_procurement_purchase" action="action_purchase_quotation" sequence="40"/>
+    <menuitem id="school_procurement_purchase_order" name="Purchase Order" parent="school_procurement_purchase" action="action_arc_order_purchase" sequence="50"/>
+    <menuitem id="school_procurement_purchase_material_receipt" name="Material Receipt" parent="school_procurement_purchase" action="action_material_transact_in" sequence="60"/>
+    <menuitem id="school_procurement_purchase_invoice" name="Purchase Invoice" parent="school_procurement_purchase" action="action_arc_invoice_purchase" sequence="70"/>
+
+    <!--Menu : Procurement : Sales-->
+    <menuitem id="school_procurement_sale" name="Sales" parent="school_procurement" sequence="20"/>
+    <menuitem id="school_procurement_sale_order" name="Sale Order" parent="school_procurement_sale" action="action_arc_order_sale" sequence="10"/>
+    <menuitem id="school_procurement_sale_material_delivery" name="Material Delivery" parent="school_procurement_sale" action="action_material_transact_out" sequence="20"/>
+    <menuitem id="school_procurement_sale_invoice" name="Sale Invoice" parent="school_procurement_sale" action="action_arc_invoice_sale" sequence="30"/>
+
+    <!--Menu : Procurement : Pharmacy-->
+
+    <!--Menu : Report : Stock-->
+    <menuitem id="school_report_stock" name="Stock" parent="school_report" sequence="10"/>
+    <menuitem id="school_report_stock_current" name="Current Stock" parent="school_report_stock" action="action_report_current_stock" sequence="10"/>
+    <menuitem id="school_report_stock_evaluation" name="Stock Evaluation" parent="school_report_stock" action="action_report_stock_evaluation" sequence="10"/>
+    <menuitem id="school_report_stock_statement" name="Stock Statement" parent="school_report_stock" action="action_report_stock_statement" sequence="10"/>
+    <menuitem id="school_report_stock_movement" name="Stock Movement" parent="school_report_stock" action="action_report_stock_movement" sequence="20"/>
+    <menuitem id="school_report_stock_analysis" name="Stock Analysis" parent="school_report_stock" action="action_report_stock_analysis" sequence="30"/>
+    <menuitem id="school_report_stock_asserts" name="Asserts" parent="school_report_stock" action="action_report_stock_asserts" sequence="40"/>
+
+    <!--&lt;!&ndash;Menu : Report : HR&ndash;&gt;-->
+    <!--<menuitem id="school_report_hr" name="Human Resources" parent="school_report" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Employee List" parent="school_report_hr" action="" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Shift Schedule" parent="school_report_hr" action="" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Attendance" parent="school_report_hr" action="" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Work Sheet" parent="school_report_hr" action="" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Leave Availability" parent="school_report_hr" action="" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Payroll" parent="school_report_hr" action="" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Payslip" parent="school_report_hr" action="" sequence="20"/>-->
+
+</odoo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Menu-->
+    <menuitem id="school_person" name="Person" sequence="10"/>
+
+    <menuitem id="school_person_account" name="Account" parent="school_person" action="action_arc_account" sequence="10"/>
+    <menuitem id="school_person_journal" name="Journal" parent="school_person" action="action_arc_journal" sequence="20"/>
+    <menuitem id="school_person_person" name="Person" parent="school_person" action="action_arc_person" sequence="30"/>
+    <menuitem id="school_person_invoice" name="Invoice" parent="school_person" action="action_arc_invoice_purchase" sequence="40"/>
+    <menuitem id="school_person_entry" name="Journal Entry" parent="school_person" action="action_journal_entry" sequence="50"/>
+    <menuitem id="school_person_payment" name="Register Payment" parent="school_person" action="action_register_payment" sequence="60"/>
+
+
+</odoo>

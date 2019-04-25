@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_school_exam_tree" model="ir.ui.view">
+        <field name="name">school.exam.tree</field>
+        <field name="model">school.exam</field>
+        <field name="arch" type="xml">
+            <tree string="Exam">
+                <field name="date"/>
+                <field name="name"/>
+                <field name="academic_id"/>
+                <field name="standard_id"/>
+                <field name="section_id"/>
+                <field name="teacher_id"/>
+                <field name="syllabus_ids"/>
+                <field name="description"/>
+                <field name="question_ids"/>
+                <field name="total_marks"/>
+                <field name="comment"/>
+                <field name="progress"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_school_exam_form" model="ir.ui.view">
+        <field name="name">school.exam.form</field>
+        <field name="model">school.exam</field>
+        <field name="arch" type="xml">
+            <form string="Exam">
+                <sheet>
+                    <group>
+                        <field name="date"/>
+                        <field name="name"/>
+                        <field name="academic_id"/>
+                        <field name="standard_id"/>
+                        <field name="section_id"/>
+                        <field name="teacher_id"/>
+                        <field name="type_id"/>
+                        <field name="syllabus_ids"/>
+                        <field name="description"/>
+                        <field name="question_ids"/>
+                        <field name="total_marks"/>
+                        <field name="comment"/>
+                        <field name="progress"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_school_exam" model="ir.actions.act_window">
+        <field name="name">Exam</field>
+        <field name="res_model">school.exam</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

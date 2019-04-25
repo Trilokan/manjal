@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_school_timetable_tree" model="ir.ui.view">
+        <field name="name">school.timetable.tree</field>
+        <field name="model">school.timetable</field>
+        <field name="arch" type="xml">
+            <tree string="Timetable">
+                <field name="academic_id"/>
+                <field name="standard_id"/>
+                <field name="section_id"/>
+                <field name="day"/>
+                <field name="first_period"/>
+                <field name="second_period"/>
+                <field name="third_period"/>
+                <field name="progress"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_school_timetable_form" model="ir.ui.view">
+        <field name="name">school.timetable.form</field>
+        <field name="model">school.timetable</field>
+        <field name="arch" type="xml">
+            <form string="Timetable">
+                <sheet>
+                    <group>
+                        <field name="academic_id"/>
+                        <field name="standard_id"/>
+                        <field name="section_id"/>
+                        <field name="day"/>
+                        <field name="first_period"/>
+                        <field name="second_period"/>
+                        <field name="third_period"/>
+                        <field name="progress"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_school_timetable" model="ir.actions.act_window">
+        <field name="name">Timetable</field>
+        <field name="res_model">school.timetable</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

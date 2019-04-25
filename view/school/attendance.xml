@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_school_attendance_tree" model="ir.ui.view">
+        <field name="name">school.attendance.tree</field>
+        <field name="model">school.attendance</field>
+        <field name="arch" type="xml">
+            <tree string="Attendance">
+                <field name="date"/>
+                <field name="academic_id"/>
+                <field name="standard_id"/>
+                <field name="section_id"/>
+                <field name="teacher_id"/>
+                <field name="comment"/>
+                <field name="progress"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_school_attendance_form" model="ir.ui.view">
+        <field name="name">school.attendance.form</field>
+        <field name="model">school.attendance</field>
+        <field name="arch" type="xml">
+            <form string="Attendance">
+                <sheet>
+                    <group>
+                        <field name="date"/>
+                        <field name="academic_id"/>
+                        <field name="standard_id"/>
+                        <field name="section_id"/>
+                        <field name="home_work"/>
+                        <field name="comment"/>
+                        <field name="progress"/>
+                    </group>
+                    <field name="attendance_detail">
+                        <tree>
+                            <field name="student_id"/>
+                            <field name="forenoon"/>
+                            <field name="afternoon"/>
+                            <field name="attendance_id"/>
+                            <field name="progress"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_school_attendance" model="ir.actions.act_window">
+        <field name="name">Attendance</field>
+        <field name="res_model">school.attendance</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

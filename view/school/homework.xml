@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_school_homework_tree" model="ir.ui.view">
+        <field name="name">school.homework.tree</field>
+        <field name="model">school.homework</field>
+        <field name="arch" type="xml">
+            <tree string="Homework">
+                <field name="date"/>
+                <field name="name"/>
+                <field name="academic_id"/>
+                <field name="standard_id"/>
+                <field name="section_id"/>
+                <field name="home_work"/>
+                <field name="comment"/>
+                <field name="progress"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_school_homework_form" model="ir.ui.view">
+        <field name="name">school.homework.form</field>
+        <field name="model">school.homework</field>
+        <field name="arch" type="xml">
+            <form string="Homework">
+                <sheet>
+                    <group>
+                        <field name="date"/>
+                        <field name="name"/>
+                        <field name="academic_id"/>
+                        <field name="standard_id"/>
+                        <field name="section_id"/>
+                        <field name="home_work"/>
+                        <field name="comment"/>
+                        <field name="progress"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_school_homework" model="ir.actions.act_window">
+        <field name="name">Homework</field>
+        <field name="res_model">school.homework</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

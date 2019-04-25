@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_register_payment_tree" model="ir.ui.view">
+        <field name="name">register.payment.tree</field>
+        <field name="model">register.payment</field>
+        <field name="arch" type="xml">
+            <tree string="Register Payment">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_register_payment_form" model="ir.ui.view">
+        <field name="name">register.payment.form</field>
+        <field name="model">register.payment</field>
+        <field name="arch" type="xml">
+            <form string="Register Payment">
+                <sheet>
+                    <field name="progress" widget="statusbar" style="float: right;padding: 20px;"/>
+                    <h2><field name="name"/></h2>
+                    <group col="4">
+                        <field name="date"/>
+                        <field name="is_payable"/>
+                        <field name="is_receivable"/>
+                        <field name="is_amount"/>
+                        <field name="is_cr_dr"/>
+                        <field name="person_id"/>
+                        <field name="invoice_id"/>
+                        <field name="note_id"/>
+                        <field name="amount"/>
+                        <field name="item_report"/>
+                        <field name="payment_report"/>
+                    </group>
+                    <field name="comment"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_register_payment" model="ir.actions.act_window">
+        <field name="name">Register Payment</field>
+        <field name="res_model">register.payment</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

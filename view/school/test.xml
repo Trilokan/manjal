@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_school_test_tree" model="ir.ui.view">
+        <field name="name">school.test.tree</field>
+        <field name="model">school.test</field>
+        <field name="arch" type="xml">
+            <tree string="Class Test">
+                <field name="date"/>
+                <field name="name"/>
+                <field name="academic_id"/>
+                <field name="standard_id"/>
+                <field name="section_id"/>
+                <field name="teacher_id"/>
+                <field name="syllabus_ids"/>
+                <field name="description"/>
+                <field name="question_ids"/>
+                <field name="total_marks"/>
+                <field name="comment"/>
+                <field name="progress"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_school_test_form" model="ir.ui.view">
+        <field name="name">school.test.form</field>
+        <field name="model">school.test</field>
+        <field name="arch" type="xml">
+            <form string="Class Test">
+                <sheet>
+                    <group>
+                        <field name="date"/>
+                        <field name="name"/>
+                        <field name="academic_id"/>
+                        <field name="standard_id"/>
+                        <field name="section_id"/>
+                        <field name="teacher_id"/>
+                        <field name="syllabus_ids"/>
+                        <field name="description"/>
+                        <field name="question_ids"/>
+                        <field name="total_marks"/>
+                        <field name="comment"/>
+                        <field name="progress"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_school_test" model="ir.actions.act_window">
+        <field name="name">Class Test</field>
+        <field name="res_model">school.test</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
