@@ -4,7 +4,7 @@ from odoo import models, fields
 
 
 class Subject(models.Model):
-    _name = "subject.subject"
+    _name = "arc.subject"
 
     name = fields.Char(string="Subject", required=True)
     subject_uid = fields.Char(string="Code", required=True)

@@ -31,18 +31,22 @@
                     <field name="progress" widget="statusbar" style="float: right;padding: 20px;"/>
                     <h2><field name="name"/></h2>
                     <group col="4">
-                        <field name="date" attrs="{'readonly': [('progress', '!=', 'draft')]}"/>
-                        <field name="person_id" attrs="{'readonly': [('progress', '!=', 'draft')]}"/>
-                        <field name="transact_by" attrs="{'readonly': [('progress', '!=', 'draft')]}"/>
-                        <field name="transact_on" attrs="{'readonly': [('progress', '!=', 'draft')]}"/>
-                        <field name="order_id" attrs="{'readonly': [('progress', '!=', 'draft')]}"/>
+                        <field name="date" readonly="1"/>
+                        <field name="person_id" readonly="1"/>
+                        <field name="transact_by" readonly="1"/>
+                        <field name="transact_on" readonly="1"/>
+                        <field name="order_id" readonly="1"/>
+                        <field name="transact_type" readonly="1"/>
+                        <field name="is_invoice_generated" invisible="1"/>
                     </group>
                     <field name="transact_detail" attrs="{'readonly': [('progress', '!=', 'draft')]}">
-                        <tree editable="bottom">
+                        <tree editable="bottom" create="false" delete="false">
                             <field name="product_id"/>
                             <field name="description"/>
                             <field name="uom_id" readonly="1"/>
                             <field name="request_quantity"/>
+                            <field name="received_quantity"/>
+                            <field name="quantity"/>
                             <field name="transact_id" invisible="1"/>
                             <field name="progress" invisible="1"/>
                         </tree>
@@ -65,7 +69,8 @@
                     <field name="attachment_ids" widget="many2many_tags" attrs="{'readonly': [('progress', '!=', 'draft')]}"/>
                     <field name="comment" attrs="{'readonly': [('progress', '!=', 'draft')]}"/>
                     <footer>
-                        <button name="trigger_confirm" string="Confirm" type="object"/>
+                        <button name="trigger_moved" string="Move" type="object" attrs="{'invisible': [('progress', '!=', 'draft')]}"/>
+                        <button name="trigger_generate_invoice" string="Generate Invoice" type="object" attrs="{'invisible': ['|',('is_invoice_generated', '=', True), ('progress', '=', 'draft')]}"/>
                     </footer>
                 </sheet>
                 <div class="oe_chatter">

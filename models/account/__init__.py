@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from . import year
 from . import account
 from . import journal
 from . import period

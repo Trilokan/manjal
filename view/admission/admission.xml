@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_school_student_admission_tree" model="ir.ui.view">
+        <field name="name">school.student.admission.tree</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <tree string="Admission">
+                <field name="academic_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_school_student_admission_form" model="ir.ui.view">
+        <field name="name">school.student.admission.form</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form string="Admission">
+                <sheet>
+                    <field name="progress" widget="statusbar" style="float: right;padding: 20px;"/>
+                    <h2><field name="name"/></h2>
+                    <div>
+                        <field name="image" widget="image" class="oe_avatar oe_left"/>
+                        <div class="oe_title">
+                            <label for="student_id" class="oe_edit_only"/>
+                            <h1><field name="student_id" class="oe_inline" modifiers="{'required': true}"/></h1>
+                            <h2><field name="student_uid"/></h2>
+                        </div>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="date"/>
+                            <field name="academic_id"/>
+                            <field name="standard_id"/>
+                            <field name="section_ids"/>
+                        </group>
+                        <group>
+                            <field name="contact_person"/>
+                            <field name="relation_type"/>
+                            <field name="phone"/>
+                            <field name="mobile"/>
+                            <field name="email"/>
+                            <field name="address"/>
+                            <field name="state_id"/>
+                            <field name="country_id"/>
+                        </group>
+                    </group>
+                    <field name="attachment_ids" widget="many2many_tags"/>
+                    <field name="comment" placeholder="Comment..."/>
+                    <footer>
+                        <button name="trigger_admit" string="Admit" type="object" attrs="{'invisible': [('progress', '!=', 'draft')]}"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_school_student_admission" model="ir.actions.act_window">
+        <field name="name">Admission</field>
+        <field name="res_model">school.student</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

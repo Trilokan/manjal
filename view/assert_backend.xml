@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_backend" name="Vetrivel CSS Assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/manjal/static/src/css/time_bar.css"/>
+            <link rel="stylesheet" href="/manjal/static/src/css/status_bar.less"/>
+            <link rel="stylesheet" href="/manjal/static/src/css/matrix.css"/>
+            <link rel="stylesheet" href="/manjal/static/src/css/suchi.css"/>
+            <link rel="stylesheet" href="/manjal/static/src/css/card_css.css"/>
+        </xpath>
+    </template>
+</odoo>

@@ -3,5 +3,3 @@
 from . import person
 from . import employee
 from . import student
-from . import admission
-from . import transfer

@@ -243,6 +243,6 @@ class Invoice(models.Model):
     @api.model
     def create(self, vals):
         sequence = "{0}.{1}".format(self._name, vals["invoice_type"])
-        vals["name"] = self.env["ir.sequence"].next_by_code(sequence)
+        vals["name"] = self.env["ir.sequence"].next_by_code(self._name)
         vals["writter"] = "Invoice created by {0} on {1}".format(self.env.user.name, CURRENT_TIME_INDIA)
         return super(Invoice, self).create(vals)

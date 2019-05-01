@@ -22,12 +22,38 @@
     """,
     "depends": ["base", "mail"],
     "data": [
+        "view/assert_backend.xml",
 
         # Sequence
         "sequence/account.xml",
         "sequence/register.xml",
         "sequence/hr.xml",
         "sequence/inventory.xml",
+
+        # # Student Admission
+        # "view/admission/admission.xml",
+        # "view/admission/transfer.xml",
+
+        # School
+        "view/school/academic.xml",
+        "view/school/standard.xml",
+        "view/school/section.xml",
+
+        # # Section
+        # "view/section/attendance.xml",
+        # "view/section/timetable.xml",
+        # "view/section/homework.xml",
+        # "view/section/diary.xml",
+        #
+        # # Syllabus
+        # "view/section/syllabus.xml",
+        # "view/section/question_bank.xml",
+        #
+        # # Exam
+        # "view/exam/test.xml",
+        # "view/exam/exam.xml",
+        # "view/exam/mark.xml",
+        # "view/exam/rank.xml",
 
         # Base
         "view/base/company.xml",

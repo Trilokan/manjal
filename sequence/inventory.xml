@@ -213,6 +213,45 @@
             <field name="number_increment">1</field>
         </record>
 
+        <!-- Purchase/Sales Return : material.transact -->
+        <record id="material_transact_sequence" model="ir.sequence">
+            <field name="name">Material Transact</field>
+            <field name="code">material.transact</field>
+            <field name="prefix">MT</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- Purchase/Sales Return : transact.detail -->
+        <record id="transact_detail_sequence" model="ir.sequence">
+            <field name="name">Material Transact Detail</field>
+            <field name="code">transact.detail</field>
+            <field name="prefix">TD</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- Purchase/Sales : arc.invoice -->
+        <record id="arc_invoice_sequence" model="ir.sequence">
+            <field name="name">Invoice</field>
+            <field name="code">arc.invoice</field>
+            <field name="prefix">INV</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- Purchase/Sales : invoice.detail -->
+        <record id="invoice_detail_sequence" model="ir.sequence">
+            <field name="name">Invoice Detail</field>
+            <field name="code">invoice.detail</field>
+            <field name="prefix">ID</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
 
     </data>
 

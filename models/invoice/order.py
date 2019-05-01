@@ -54,8 +54,31 @@ class Order(models.Model):
     comment = fields.Text(string="Comment")
 
     @api.multi
+    def get_transact_type(self):
+        transact_type = None
+        if self.order_type in ["purchase", "sales_return"]:
+            transact_type = "in"
+        elif self.order_type in ["sales", "purchase_return"]:
+            transact_type = "out"
+
+        return transact_type
+
+    @api.multi
     def generate_material_transact(self):
-        pass
+        transact_detail = []
+
+        recs = self.env["order.detail"].search([("order_id", "=", self.id), ("quantity", ">", 0)])
+        for rec in recs:
+            transact_detail.append((0, 0, {"ref": rec.name,
+                                           "product_id": rec.product_id.id,
+                                           "description": rec.description,
+                                           "request_quantity": rec.quantity}))
+
+        if transact_detail:
+            self.env["material.transact"].create({"order_id": self.id,
+                                                  "person_id": self.person_id.id,
+                                                  "transact_type": self.get_transact_type(),
+                                                  "transact_detail": transact_detail})
 
     @api.multi
     def trigger_confirm(self):

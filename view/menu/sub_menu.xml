@@ -11,15 +11,15 @@
 
     <!--Menu : Academic : Master-->
     <menuitem id="school_academic_master" name="Master" parent="school_academic" sequence="20"/>
-    <menuitem id="school_academic_master_academic" name="Academic" parent="school_academic_master" action="" sequence="10"/>
-    <menuitem id="school_academic_master_standard" name="Standard" parent="school_academic_master" action="" sequence="20"/>
-    <menuitem id="school_academic_master_section" name="Section" parent="school_academic_master" action="" sequence="30"/>
+    <menuitem id="school_academic_master_academic" name="Academic" action="action_school_academic" parent="school_academic_master" sequence="10"/>
+    <menuitem id="school_academic_master_standard" name="Standard" action="action_school_standard" parent="school_academic_master" sequence="20"/>
+    <menuitem id="school_academic_master_section" name="Section" action="action_school_section" parent="school_academic_master" sequence="30"/>
 
     <!--Menu : Academic : Academic-->
     <menuitem id="school_academic_academic" name="Academic" parent="school_academic" sequence="30"/>
-    <menuitem id="school_academic_academic_academic" name="Academic" parent="school_academic_academic" action="" sequence="10"/>
-    <menuitem id="school_academic_academic_standard" name="Standard" parent="school_academic_academic" action="" sequence="20"/>
-    <menuitem id="school_academic_academic_section" name="Section" parent="school_academic_academic" action="" sequence="30"/>
+    <menuitem id="school_academic_academic_academic" name="Academic" parent="school_academic_academic" sequence="10"/>
+    <menuitem id="school_academic_academic_standard" name="Standard" parent="school_academic_academic" sequence="20"/>
+    <menuitem id="school_academic_academic_section" name="Section" parent="school_academic_academic" sequence="30"/>
 
     <!--Menu : Academic : Syllabus-->
     <menuitem id="school_academic_syllabus" name="Syllabus" parent="school_academic" sequence="30"/>
@@ -95,13 +95,13 @@
 
     <!--&lt;!&ndash;Menu : Report : HR&ndash;&gt;-->
     <!--<menuitem id="school_report_hr" name="Human Resources" parent="school_report" sequence="20"/>-->
-    <!--<menuitem id="school_report_hr" name="Employee List" parent="school_report_hr" action="" sequence="20"/>-->
-    <!--<menuitem id="school_report_hr" name="Shift Schedule" parent="school_report_hr" action="" sequence="20"/>-->
-    <!--<menuitem id="school_report_hr" name="Attendance" parent="school_report_hr" action="" sequence="20"/>-->
-    <!--<menuitem id="school_report_hr" name="Work Sheet" parent="school_report_hr" action="" sequence="20"/>-->
-    <!--<menuitem id="school_report_hr" name="Leave Availability" parent="school_report_hr" action="" sequence="20"/>-->
-    <!--<menuitem id="school_report_hr" name="Payroll" parent="school_report_hr" action="" sequence="20"/>-->
-    <!--<menuitem id="school_report_hr" name="Payslip" parent="school_report_hr" action="" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Employee List" parent="school_report_hr" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Shift Schedule" parent="school_report_hr" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Attendance" parent="school_report_hr" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Work Sheet" parent="school_report_hr" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Leave Availability" parent="school_report_hr" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Payroll" parent="school_report_hr" sequence="20"/>-->
+    <!--<menuitem id="school_report_hr" name="Payslip" parent="school_report_hr" sequence="20"/>-->
 
 </odoo>
 
