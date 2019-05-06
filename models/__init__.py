@@ -4,8 +4,11 @@ from . import base
 from . import general
 from . import register
 from . import school
+from . import admission
+from . import section
 from . import academic
 from . import syllabus
+from . import activities
 
 from . import account
 

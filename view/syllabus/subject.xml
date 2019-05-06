@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_arc_subject_tree" model="ir.ui.view">
+        <field name="name">arc.subject.tree</field>
+        <field name="model">arc.subject</field>
+        <field name="arch" type="xml">
+            <tree string="Subject">
+                <field name="name"/>
+                <field name="subject_uid"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_arc_subject_form" model="ir.ui.view">
+        <field name="name">arc.subject.form</field>
+        <field name="model">arc.subject</field>
+        <field name="arch" type="xml">
+            <form string="Subject">
+                <sheet>
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="subject_uid"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_arc_subject" model="ir.actions.act_window">
+        <field name="name">Subject</field>
+        <field name="res_model">arc.subject</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

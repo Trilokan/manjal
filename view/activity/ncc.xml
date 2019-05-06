@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_school_activity_co_ncc_tree" model="ir.ui.view">
+        <field name="name">school.activity.co.ncc.tree</field>
+        <field name="model">school.activity</field>
+        <field name="arch" type="xml">
+            <tree string="NCC">
+                <field name="date"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_school_activity_co_ncc_form" model="ir.ui.view">
+        <field name="name">school.activity.co.ncc.form</field>
+        <field name="model">school.activity</field>
+        <field name="arch" type="xml">
+            <form string="NCC">
+                <sheet>
+                    <field name="activity_type" invisible="1"/>
+                    <h2><field name="name"/></h2>
+                    <group col="4">
+                        <field name="date"/>
+                        <field name="academics_id"/>
+                        <field name="activity_type_id" invisible="0"/>
+                    </group>
+                    <notebook>
+                        <page string="Activity Detail">
+                            <group>
+                                <field name="supervisor_ids" widget="many2many_tags"/>
+                            </group>
+                            <field name="activity_detail"/>
+                        </page>
+                        <page string="Participants">
+                            <field name="participants_ids"/>
+                        </page>
+                    </notebook>
+                    <field name="attachment_ids" widget="many2many_binary"/>
+                    <field name="comment" placeholder="Comment.."/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_school_activity_co_ncc" model="ir.actions.act_window">
+        <field name="name">NCC</field>
+        <field name="res_model">school.activity</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('activity_type_id.name', '=', 'NCC')]</field>
+        <field name="context">{'default_activity_type': 'co_curricular'}]</field>
+        <field name="view_id" ref="view_school_activity_co_ncc_tree"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_school_activity_co_ncc_form">
+        <field eval="2" name="sequence"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_school_activity_co_ncc_form" />
+        <field name="act_window_id" ref="action_school_activity_co_ncc"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_school_activity_co_ncc_tree">
+        <field eval="1" name="sequence"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_school_activity_co_ncc_tree"/>
+        <field name="act_window_id" ref="action_school_activity_co_ncc"/>
+    </record>
+
+
+</odoo>

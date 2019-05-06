@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_syllabus_syllabus_tree" model="ir.ui.view">
+        <field name="name">syllabus.syllabus.tree</field>
+        <field name="model">syllabus.syllabus</field>
+        <field name="arch" type="xml">
+            <tree string="Syllabus">
+                <field name="standard_id"/>
+                <field name="subject_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_syllabus_syllabus_form" model="ir.ui.view">
+        <field name="name">syllabus.syllabus.form</field>
+        <field name="model">syllabus.syllabus</field>
+        <field name="arch" type="xml">
+            <form string="Syllabus">
+                <sheet>
+                    <group col="4">
+                        <field name="standard_id"/>
+                        <field name="subject_id"/>
+                    </group>
+                    <field name="syllabus_ids">
+                        <tree>
+                            <field name="sequence"/>
+                            <field name="name"/>
+                        </tree>
+                    </field>
+                    <field name="attachment_ids" widget="many2many_tags"/>
+                    <field name="comment" placeholder="Comment"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_syllabus_syllabus" model="ir.actions.act_window">
+        <field name="name">Syllabus</field>
+        <field name="res_model">syllabus.syllabus</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

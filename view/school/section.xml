@@ -125,7 +125,33 @@
                             </tr>
                         </table>
                     </div>
-
+                    <notebook>
+                        <page string="Students">
+                            <field name="student_ids">
+                                <tree>
+                                    <field name="student_id"/>
+                                    <field name="student_uid"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Syllabus">
+                            <field name="syllabus_ids">
+                                <tree>
+                                    <field name="syllabus_id"/>
+                                    <field name="subject_id"/>
+                                    <field name="teacher_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Homework">
+                            <field name="homework_ids">
+                                <tree>
+                                    <field name="date"/>
+                                    <field name="home_work"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

@@ -44,16 +44,32 @@
         # "view/section/timetable.xml",
         # "view/section/homework.xml",
         # "view/section/diary.xml",
-        #
-        # # Syllabus
-        # "view/section/syllabus.xml",
-        # "view/section/question_bank.xml",
-        #
+
+        # Syllabus
+        "view/syllabus/subject.xml",
+        "view/syllabus/school_syllabus.xml",
+        "view/syllabus/syllabus_syllabus.xml",
+        "view/syllabus/question_paper.xml",
+        "view/syllabus/question_bank.xml",
+
+        # Activity
+        "view/activity/co_curricular.xml",
+        "view/activity/ncc.xml",
+        "view/activity/nss.xml",
+        "view/activity/extra_curricular.xml",
+        "view/activity/yoga.xml",
+        "view/activity/music.xml",
+        "view/activity/event.xml",
+        "view/activity/event_participants.xml",
+        "view/activity/award.xml",
+
         # # Exam
         # "view/exam/test.xml",
         # "view/exam/exam.xml",
         # "view/exam/mark.xml",
         # "view/exam/rank.xml",
+
+
 
         # Base
         "view/base/company.xml",

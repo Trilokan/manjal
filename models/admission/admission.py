@@ -28,7 +28,7 @@ class StudentAdmission(models.Model):
     name = fields.Char(string="Name", readonly=True)
     image = fields.Binary(string="Image", readonly=True)
     student_id = fields.Many2one(comodel_name="arc.student", string="Student", required=True)
-    student_uid = fields.Char(string="Student", related=student_id.student_uid)
+    student_uid = fields.Char(string="Student", related="student_id.student_uid")
     progress = fields.Selection(selection=PROGRESS_INFO, string="Progress", default="draft")
 
     comment = fields.Text(string="Comment")

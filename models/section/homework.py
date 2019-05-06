@@ -23,11 +23,6 @@ class Homework(models.Model):
     progress = fields.Selection(selection=PROGRESS_INFO, string="Progress", default="draft")
     writter = fields.Text(string="Writter", track_visibility="always")
 
-    @api.multi
-    def trigger_confirm(self):
-        writter = "Homework confirm by {0} on {1}".format(self.env.user.name, CURRENT_INDIA)
-        self.write({"progress": "confirmed", "writter": writter})
-
     @api.model
     def create(self, vals):
         vals["name"] = self.env["ir.sequence"].next_by_code(self._name)

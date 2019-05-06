@@ -21,13 +21,13 @@ class SchoolSection(models.Model):
     supervisor_id = fields.Many2one(comodel_name="arc.person", string="Class Teacher")
     leader_id = fields.Many2one(comodel_name="school.student", string="Class Leader")
 
-    # student_ids = fields.Many2many(comodel_name="school.student", string="Student")
-    # subject_ids = fields.One2many(comodel_name="school.subject", inverse_name="section_id")
+    student_ids = fields.Many2many(comodel_name="school.student", string="Student")
+    syllabus_ids = fields.One2many(comodel_name="school.syllabus", inverse_name="section_id")
     # test_ids = fields.One2many(comodel_name="school.test", inverse_name="section_id")
     # exam_ids = fields.One2many(comodel_name="school.exam", inverse_name="section_id")
     # mark_ids = fields.One2many(comodel_name="school.exam", inverse_name="section_id")
     # rank_ids = fields.One2many(comodel_name="school.exam", inverse_name="section_id")
-    # homework_ids = fields.One2many(comodel_name="school.homework", inverse_name="section_id")
+    homework_ids = fields.One2many(comodel_name="school.homework", inverse_name="section_id")
     # attendance_ids = fields.One2many(comodel_name="school.attendance", inverse_name="section_id")
     # time_table_ids = fields.One2many(comodel_name="school.time.table", inverse_name="section_id")
 
